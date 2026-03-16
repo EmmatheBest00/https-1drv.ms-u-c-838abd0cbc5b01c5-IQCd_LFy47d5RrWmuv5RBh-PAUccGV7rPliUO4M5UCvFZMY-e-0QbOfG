@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Happy Birthday</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+  background: linear-gradient(135deg,#ff9ecf,#ffd6ec);
+  text-align:center;
+  font-family:Arial;
+  overflow-x:hidden;
+  padding:0 10px;
+}
+
+h1{
+  margin-top:50px;
+  font-size:6vw;
+}
+
+#gift{
+  font-size:20vw;
+  cursor:pointer;
+  transition:transform 0.3s;
+}
+
+#gift:hover{
+  transform:scale(1.2);
+}
+
+#message{
+  display:none;
+  font-size:4vw;
+  margin-top:30px;
+  max-width:90%;
+  margin-left:auto;
+  margin-right:auto;
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+#cake{
+  font-size:15vw;
+  cursor:pointer;
+  margin-top:20px;
+}
+
+#reasons{
+  display:none;
+  margin-top:20px;
+}
+
+button{
+  padding:12px 18px;
+  margin:5px;
+  border:none;
+  border-radius:8px;
+  background:#ff6fae;
+  color:white;
+  font-size:4vw;
+  cursor:pointer;
+}
+
+button:hover{
+  background:#ff4d9d;
+}
+
+.heart{
+  position:fixed;
+  top:-10px;
+  font-size:25px;
+  animation:fall 4s linear;
+}
+
+@keyframes fall{
+0%{transform:translateY(-10vh);}
+100%{transform:translateY(100vh);}
+}
+
+.bigHeart{
+  font-size:12vw;
+  margin-top:30px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Click your birthday little gift &#127873;</h1>
+
+<div id="gift" onclick="openGift()">&#127873;</div>
+
+<div id="message">
+
+<h2>Happy 19th birthdayyy to my sweetest and prettiest boy everrrr &#127874;&#10084;&#10084;</h2>
+
+<p dir="rtl">
+<!-- WRITE YOUR BIRTHDAY MESSAGE HERE -->
+كل عام والطف و اكيت و احلا قمر بالوجود بخييييرر &#127881;&#127881;&#127881;&#127881;<br><br>
+يارب كل ايامك تكون كيت و حلوة و بتججنننن زيك يروح روحي &#10084;<br>
+طبعا قعدت افكر شو اهديك بعدين قلت اورجيك كيف اني كالكوليتر يو نو <br>
+ف عملتلك موقع ك هدية لك انت و بس يعسولي <br>
+<br>عمري ما تخيلت اتعرف على حد اتعلق فيه للدرجة بس انت سولميتي انا بعشقك اكتر من نفسي و من اهلي و من اي حد بحياتي و عمري ما بد ابعد عنك يعسلي و مش مصدقة متى اتزوجك و اعيش معك بنفس البيت انا مهما قدمت و مهما عملت هضل مش موفيتك حقك ابدا ابدا انت رمشة منك تسوى الدنيا كلها بالنسبة لي بموت فيك كتير كتتييييررر والله و انا محظوظة فيك كتير ف خليك معي للابد لاني حتى لما تغيب ولو لدقيقة بحسني اشتقتلك و بدي اياكوعمري ما تثقلت منك او من اي طلب بحياتك طلبته مني و اعرف انه اي شي بتحتاجه بحياتك هكون دايما جنبك و مستعدة اسمع كلشي منك بدون ما احسك ثقيل علي نهائيا
+</p>
+اانننجججووويييييييي يووممككك يييككيييتتتععععع كل سنة و انت حبيبي و قلبي و اكتر من بعشقه بدنيتي&#127801;
+
+<h3>Blow your candlesss(click on the cake!) &#127874;</h3>
+
+<div id="cake" onclick="blowCandles()">&#127874;</div>
+
+<div id="reasons">
+<h3>19 Reasons I Like You &#10084;</h3>
+<div id="buttons"></div>
+<p id="reasonText"></p>
+</div>
+
+<div class="bigHeart">&#10084;</div>
+
+</div>
+
+<script>
+function openGift(){
+  document.getElementById("gift").innerHTML="&#127881;"; // confetti
+  document.getElementById("message").style.display="block";
+  for(let i=0;i<40;i++){
+    createHeart();
+  }
+}
+
+function createHeart(){
+  const heart=document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML="&#10084;"; // قلب
+  heart.style.left=Math.random()*90+"vw";
+  heart.style.fontSize=(Math.random()*30+20)+"px";
+  heart.style.animationDuration=(Math.random()*5+6)+"s";
+  document.body.appendChild(heart);
+  setTimeout(()=>{heart.remove();},10000);
+}
+
+function blowCandles(){
+  document.getElementById("cake").innerHTML="&#127874;"; // كعكة
+  document.getElementById("reasons").style.display="block";
+}
+
+const reasons=[
+"انك كتيررر لططيفف و كيوت جد اكيت من بالدنيا",
+"انك كتير بتهتم فيني و بتمدحني بتحسسني دايما انه قيمتي كبيرة ",
+"انك بتضحكنيي كتتييرر هيك جد عمره ما حدقدر يضحكني كتير من قلبي زيك",
+"انك دايما بتحاول تبسطني و تراضيني لما اكون زعلانة و بيهونش عليك",
+"انه شكلك بيججنننن ما شاء الله حرفيا بيرفكت",
+"بحب الطريقة اللي بتتفرج علي فيها هيك لما تتأملنييييي ",
+"بحب اقضي وقت معك العب معك و اتفرج معك بعشق طريقة لعبك كمان ",
+"بععشققق صوتك الكيت و لما تغني كمان بيكون ككيووتت",
+"بعشق رقصاتك و الحركات اللي بكولاتنا هيق اللي بتعملها عشان تضحكني و نكتك الكيت اللي عمرهم ما فشلوا يضحكوني",
+"بعشق انه بنقعد نستهبل مع بعض و اننا بنقعد اوقات طويلة نتكلم كولات بدون ما نحس بالوقت ",
+"بعشق انك بتهتم بكل التفاصيل عني ",
+"بحب اسمع تفاصيل عن يومك او رأيك بالاكل اللي جبته بحب اسمعك بتتكلم",
+"بحب انك بتدعمني و بتبينلي انك فخور فيني حتى لو عاملة شي بسيط",
+"بموت بجمالك و بتفاصيلك بعشق وجهك و جسمك و كلشي فيك جد كلشي فيك بيجنن اللهم بارك بيرفكككتتتتت",
+"بعشقققق ابتسامتك و بعشق كل تعابير وجهكككك",
+"بعشق ضحكتك الجميلة الله يديمها لك يروحي و دايا اشوفك بتضحك",
+"بعشق فكرة انك لي لحالي انا و بس لدرجة اني مش قادرة استوعب انه جد",
+"بحب اني بحس ب امان كبير لما اكون معك ف باخد راحتي بالكلام",
+"بموت فيك لانه انت هو انت و عمري بحياتي كلها م كنت هطلب شي غيرك او مواصفات غير مواصفاتك انا لولا اني عرفتك عمري م كنت هتزوج لانه مافي زيك ب اي تفصيلة يروحي"
+];
+
+const buttonsDiv=document.getElementById("buttons");
+
+reasons.forEach((reason,index)=>{
+  const btn=document.createElement("button");
+  btn.innerText=index+1;
+  btn.onclick=function(){
+    document.getElementById("reasonText").innerText=reason;
+  }
+  buttonsDiv.appendChild(btn);
+});
+</script>
+
+</body>
+</html>
